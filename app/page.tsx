@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { CA, TICKER, X_URL, NOXA_URL, DEX_URL, isRealCA } from "./config";
 import { XIcon, FlockIcon, TrophyIcon } from "./art/icons";
-import { hoodCatSvg } from "./art/cats";
 import { getSfx } from "./sfx";
 import { getMusic } from "./music";
 import { getBestScore, getBestFlock } from "./store";
@@ -19,9 +19,11 @@ const NAV = [
 ];
 
 const CREW = [
-  { name: "THE WHEELMAN", coat: "#b7bcc4", hoodie: "#2a3550", bandana: "#ff4444" },
-  { name: "THE SAFECRACKER", coat: "#2c2c2c", hoodie: "#1c3324", bandana: "#c9c9c9" },
-  { name: "THE LOOKOUT", coat: "#e08a3c", hoodie: "#3a1f4d", bandana: "#3ecbc9" },
+  { img: "cat2", name: "THE HOOD", w: 285, h: 560 },
+  { img: "cat3", name: "THE WHEELMAN", w: 342, h: 560 },
+  { img: "cat5", name: "THE SAFECRACKER", w: 508, h: 560 },
+  { img: "cat4", name: "THE LOOKOUT", w: 284, h: 420 },
+  { img: "cat1", name: "THE MUSCLE", w: 336, h: 330 },
 ];
 
 const HOW = [
@@ -31,7 +33,7 @@ const HOW = [
 ];
 
 const NOTES = [
-  { h: "wtf is this", b: "A cat in a hoodie, three lanes, and a whole street of guards between you and the bag." },
+  { h: "wtf is this", b: "One green cat, three lanes, and a whole street of guards between you and the bag." },
   { h: "the chain", b: "Built for Robinhood Chain — the newest L2 in town, where a cat coin was the first thing to pop off. $HOODCATS runs with that." },
   { h: "the flock", b: "Rob the rich, feed the flock. Skip the deliveries and your loot never counts for anything." },
 ];
@@ -46,8 +48,7 @@ function useReveal() {
 }
 
 function BrandMark() {
-  const svg = useMemo(() => hoodCatSvg("#c9a876", "#232733", "#f2c14e"), []);
-  return <span className="brand-mascot" dangerouslySetInnerHTML={{ __html: svg }} />;
+  return <Image src="/cats/cat2.png" alt="" width={26} height={51} className="brand-mascot" />;
 }
 
 function CABlock() {
@@ -139,7 +140,7 @@ export default function Home() {
           <div className="roster reveal">
             {CREW.map((c) => (
               <div className="crew" key={c.name}>
-                <div className="crew-pic" dangerouslySetInnerHTML={{ __html: hoodCatSvg(c.coat, c.hoodie, c.bandana) }} />
+                <div className="crew-pic"><Image src={`/cats/${c.img}.png`} alt={c.name} width={c.w} height={c.h} /></div>
                 <span className="crew-name">{c.name}</span>
               </div>
             ))}

@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getMusic } from "./music";
 import { getSfx } from "./sfx";
-import { hoodCatSvg } from "./art/cats";
 
 const BOOT_LINES = ["casing the vault", "cutting the cameras", "recruiting the crew", "checking for snitches"];
 
@@ -15,10 +14,6 @@ export default function Enter() {
   const [lines, setLines] = useState<string[]>([]);
   const [leaving, setLeaving] = useState(false);
   const done = useRef(false);
-  const mascotSrc = useMemo(
-    () => "data:image/svg+xml;charset=utf-8," + encodeURIComponent(hoodCatSvg("#c9a876", "#232733", "#f2c14e")),
-    []
-  );
 
   useEffect(() => {
     if (phase !== "gone") document.body.style.overflow = "hidden"; else document.body.style.overflow = "";
@@ -63,7 +58,7 @@ export default function Enter() {
       {phase === "wake" && (
         <button className="wake" onClick={wake} aria-label="Tap to rob">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="wake-img" src={mascotSrc} alt="" width={220} height={188} />
+          <img className="wake-img" src="/cats/cat2.png" alt="" width={200} height={392} />
           <span className="wake-cta">tap to rob</span>
           <span className="wake-sub">sound on · dodge the guards, grab the bags</span>
         </button>

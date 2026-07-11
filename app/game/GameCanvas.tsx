@@ -106,7 +106,8 @@ export default function GameCanvas() {
           : e.obstacleKind === "camera" ? sprites.camera
           : sprites.laser;
         if (img.complete && img.naturalWidth > 0) {
-          const ih = scale * (e.kind === "obstacle" && e.obstacleKind === "laser" ? 0.9 : 0.42);
+          const isLaser = e.kind === "obstacle" && e.obstacleKind === "laser";
+          const ih = scale * (isLaser ? 0.9 : e.kind === "flock" ? 0.5 : 0.42);
           const iw = ih * (img.naturalWidth / img.naturalHeight);
           ctx.drawImage(img, px - iw / 2, py - ih / 2, iw, ih);
         }
@@ -117,8 +118,8 @@ export default function GameCanvas() {
       visualLaneY += (targetY - visualLaneY) * Math.min(1, dt / 90);
       const p = sprites.player;
       if (p.complete && p.naturalWidth > 0) {
-        const ih = scale * 0.5, iw = ih * (p.naturalWidth / p.naturalHeight);
-        ctx.drawImage(p, PLAYER_X * W - iw * 0.32, visualLaneY - ih * 0.55, iw, ih);
+        const ih = scale * 0.6, iw = ih * (p.naturalWidth / p.naturalHeight);
+        ctx.drawImage(p, PLAYER_X * W - iw / 2, visualLaneY - ih * 0.62, iw, ih);
       }
 
       syncHud();

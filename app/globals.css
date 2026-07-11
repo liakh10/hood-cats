@@ -54,8 +54,7 @@ code, .mono { font-family: var(--font-mono), monospace; }
 /* ═══════════════ nav ═══════════════ */
 .nav { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem clamp(1rem, 4vw, 2.5rem); background: rgba(13,15,20,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 .brand { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-display); font-size: 1.15rem; letter-spacing: 0.02em; }
-.brand-mascot { display: inline-flex; width: 26px; height: 26px; filter: drop-shadow(0 0 6px rgba(242,193,78,0.4)); }
-.brand-mascot svg { width: 100%; height: 100%; display: block; }
+.brand-mascot { width: 24px; height: auto; filter: drop-shadow(0 0 6px rgba(242,193,78,0.4)); }
 .brand-ticker { font-family: var(--font-mono); font-size: 0.6rem; color: var(--gold); border: 1px solid var(--line); border-radius: 4px; padding: 0.1rem 0.4rem; }
 .nav-links { display: flex; gap: 1.4rem; font-family: var(--font-display); font-size: 0.95rem; }
 .nav-links a { color: var(--ink-soft); }
@@ -115,8 +114,8 @@ code, .mono { font-family: var(--font-mono), monospace; }
 
 .roster { display: flex; justify-content: center; gap: clamp(0.7rem, 2vw, 1.6rem); flex-wrap: wrap; }
 .crew { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
-.crew-pic { width: clamp(84px, 13vw, 112px); height: clamp(84px, 13vw, 112px); border-radius: 10px; border: 1.5px solid var(--line); background: radial-gradient(circle at 50% 30%, rgba(242,193,78,0.1), rgba(13,15,20,0.7)); display: flex; align-items: center; justify-content: center; padding: 0.6rem; }
-.crew-pic svg { width: 100%; height: 100%; }
+.crew-pic { width: clamp(84px, 13vw, 112px); height: clamp(84px, 13vw, 112px); border-radius: 10px; border: 1.5px solid var(--line); background: radial-gradient(circle at 50% 30%, rgba(242,193,78,0.1), rgba(13,15,20,0.7)); display: flex; align-items: flex-start; justify-content: center; overflow: hidden; }
+.crew-pic img { width: 92%; height: auto; object-fit: contain; }
 .crew-name { font-family: var(--font-display); font-size: 0.78rem; letter-spacing: 0.03em; color: var(--green); text-transform: uppercase; }
 
 .notes-wall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
