@@ -16,6 +16,7 @@ const NAV = [
   { href: "#play", label: "Rob" },
   { href: "#how", label: "How" },
   { href: "#roster", label: "Crew" },
+  { href: "/docs", label: "Docs" },
 ];
 
 const CREW = [
@@ -157,7 +158,7 @@ export default function Home() {
         <footer className="footer">
           <div className="footer-top reveal">
             <a href="#top" className="brand"><BrandMark /> <b>Hood Cats</b></a>
-            <div className="footer-links"><a href="#play">Rob</a><a href="#how">How</a><a href="#roster">Crew</a><a href={X_URL} target="_blank" rel="noreferrer" className="footer-x" aria-label="X"><XIcon size={14} /></a></div>
+            <div className="footer-links"><a href="#play">Rob</a><a href="#how">How</a><a href="#roster">Crew</a><a href="/docs">Docs</a><a href={X_URL} target="_blank" rel="noreferrer" className="footer-x" aria-label="X"><XIcon size={14} /></a></div>
           </div>
           <div className="footer-buy reveal"><CABlock /><BuyLinks small /></div>
           <p className="footer-bottom">© {new Date().getFullYear()} {TICKER} · rob responsibly</p>
