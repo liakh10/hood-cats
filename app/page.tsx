@@ -48,10 +48,6 @@ function useReveal() {
   }, []);
 }
 
-function BrandMark() {
-  return <Image src="/cats/cat2.png" alt="" width={26} height={51} className="brand-mascot" />;
-}
-
 function CABlock() {
   const [copied, setCopied] = useState(false);
   const real = isRealCA();
@@ -109,7 +105,7 @@ export default function Home() {
       <Enter />
       <main>
         <header className="nav">
-          <a href="#top" className="brand"><BrandMark /> <b>Hood Cats</b> <span className="brand-ticker">{TICKER}</span></a>
+          <a href="#top" className="brand"><Image src="/x-avatar.png" alt="" width={26} height={26} style={{ borderRadius: "50%", objectFit: "cover" }} /> <b>Hood Cats</b> <span className="brand-ticker">{TICKER}</span></a>
           <nav className="nav-links">{NAV.map((n) => <a key={n.href} href={n.href}>{n.label}</a>)}</nav>
           <div className="nav-actions">
             <button className="icon-btn" onClick={toggleMute} title="sound">{muted ? "off" : "on"}</button>
@@ -157,7 +153,7 @@ export default function Home() {
 
         <footer className="footer">
           <div className="footer-top reveal">
-            <a href="#top" className="brand"><BrandMark /> <b>Hood Cats</b></a>
+            <a href="#top" className="brand"><Image src="/x-avatar.png" alt="" width={26} height={26} style={{ borderRadius: "50%", objectFit: "cover" }} /> <b>Hood Cats</b></a>
             <div className="footer-links"><a href="#play">Rob</a><a href="#how">How</a><a href="#roster">Crew</a><a href="/docs">Docs</a><a href={X_URL} target="_blank" rel="noreferrer" className="footer-x" aria-label="X"><XIcon size={14} /></a></div>
           </div>
           <div className="footer-buy reveal"><CABlock /><BuyLinks small /></div>
