@@ -1,4 +1,4 @@
-// Hood Cats Online — 3-lane heist runner. The world scrolls left at a
+// Bit Cats — 3-lane heist runner. The world scrolls left at a
 // growing speed; the player switches lanes to grab loot bags, avoid guards/
 // lasers/cameras (one hit = busted), and cash in held loot at flock drops
 // for a score bonus. All positions are normalized (0..1 across the stage).

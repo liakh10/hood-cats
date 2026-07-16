@@ -4,7 +4,7 @@ import DocsContent from "./DocsContent";
 
 export const metadata: Metadata = {
   title: `${TICKER} Docs`,
-  description: "Field manual for Hood Cats Online — gameplay, the crew, and the token.",
+  description: "Field manual for Bit Cats — gameplay, the crew, and the token.",
 };
 
 export default function DocsPage() {

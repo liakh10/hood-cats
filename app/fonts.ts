@@ -1,6 +1,6 @@
 import { Anton, Inter, JetBrains_Mono } from "next/font/google";
 
-// Hood Cats Online identity — a bold "wanted poster" stencil display (Anton),
+// Bit Cats identity — a bold "wanted poster" stencil display (Anton),
 // unused elsewhere in the hub (distinct from Titan One / Fredoka / Cinzel /
 // Orbitron / Bangers / Bungee / Baloo / Bricolage / Space Grotesk).
 export const display = Anton({

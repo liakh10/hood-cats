@@ -5,7 +5,7 @@ import { display, sans, mono } from "./fonts";
 
 export const metadata: Metadata = {
   title: TICKER, // tab title is always just the ticker
-  description: `${TOKEN_NAME} — rob the rich, feed the flock, dodge the guards. A heist runner for cats, on Robinhood Chain.`,
+  description: `${TOKEN_NAME} — rob the rich, feed the flock, dodge the guards. A heist runner for cats, on Solana.`,
 };
 
 export const viewport = { themeColor: "#0d0f14" };

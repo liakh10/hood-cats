@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { CA, TICKER, NOXA_URL, DEX_URL, isRealCA } from "../config";
+import { CA, TICKER, PUMP_URL, DEX_URL, isRealCA } from "../config";
 
 const SECTIONS = [
-  { id: "overview", label: "What is Hood Cats?" },
+  { id: "overview", label: "What is Bit Cats?" },
   { id: "controls", label: "Gameplay & Controls" },
   { id: "street", label: "The Street" },
   { id: "scoring", label: "Loot & Flock Bonus" },
@@ -43,7 +43,7 @@ export default function DocsContent() {
   return (
     <>
       <header className="nav">
-        <Link href="/#top" className="brand"><Image src="/cats/cat2.png" alt="" width={26} height={51} className="brand-mascot" /> <b>Hood Cats</b> <span className="brand-ticker">{TICKER}</span></Link>
+        <Link href="/#top" className="brand"><Image src="/cats/cat2.png" alt="" width={26} height={51} className="brand-mascot" /> <b>Bit Cats</b> <span className="brand-ticker">{TICKER}</span></Link>
         <nav className="nav-links">
           <Link href="/#play">Rob</Link>
           <Link href="/#how">How</Link>
@@ -65,19 +65,19 @@ export default function DocsContent() {
 
         <main className="docs-main">
           <div className="docs-hero">
-            <h1>Hood Cats Docs</h1>
+            <h1>Bit Cats Docs</h1>
             <p>Everything about the heist runner, the crew, and {TICKER} — in one page.</p>
           </div>
 
           <section id="overview" ref={(el) => { refs.current.overview = el; }} className="docs-section">
-            <h2>What is Hood Cats?</h2>
+            <h2>What is Bit Cats?</h2>
             <p>
-              Hood Cats Online is a 3-lane heist runner, playable instantly in the browser — no download,
+              Bit Cats is a 3-lane heist runner, playable instantly in the browser — no download,
               no signup. The street scrolls toward you at a growing speed; switch lanes to grab loot and
               dodge guards, lasers, and cameras.
             </p>
             <div className="docs-table">
-              <Row label="Ticker">{TICKER} (Robinhood Chain, fair launch)</Row>
+              <Row label="Ticker">{TICKER} (Solana, fair launch)</Row>
               <Row label="Format">Single-player 3-lane runner, one-hit-and-you&apos;re-busted</Row>
               <Row label="Cost to play">Free, unlimited, no wallet required</Row>
             </div>
@@ -119,11 +119,11 @@ export default function DocsContent() {
             <h2>{TICKER} Token</h2>
             <p>The game has no in-game currency or shop — {TICKER} is a separate community token that doesn&apos;t affect gameplay, spawn rates, or scoring in any way.</p>
             <div className="docs-table">
-              <Row label="Chain">Robinhood Chain — not Solana. This is the one project in the hub built for it</Row>
+              <Row label="Chain">Solana</Row>
               <Row label="Contract">{real ? <code className="mono">{CA}</code> : "SOON — not launched yet"}</Row>
-              <Row label="Launch style">Fair launch on NOXA, no presale, no team allocation</Row>
+              <Row label="Launch style">Fair launch on Pump Fun, no presale, no team allocation</Row>
               <Row label="Buy links">
-                <a href={real ? NOXA_URL + CA : NOXA_URL} target="_blank" rel="noreferrer">NOXA</a>
+                <a href={real ? PUMP_URL + CA : PUMP_URL} target="_blank" rel="noreferrer">Pump Fun</a>
                 {" · "}
                 <a href={real ? DEX_URL + CA : DEX_URL} target="_blank" rel="noreferrer">DexScreener</a>
               </Row>
@@ -154,9 +154,7 @@ export default function DocsContent() {
             <h2>FAQ</h2>
             <dl className="docs-faq">
               <dt>Do I need a wallet to play?</dt>
-              <dd>No. Hood Cats is fully playable free, with no connection of any kind.</dd>
-              <dt>Why Robinhood Chain and not Solana?</dt>
-              <dd>This is the one game in the hub built around Robinhood Chain&apos;s launch — the CA block points to NOXA and DexScreener/robinhood accordingly, not pump.fun.</dd>
+              <dd>No. Bit Cats is fully playable free, with no connection of any kind.</dd>
               <dt>Is {TICKER} live yet?</dt>
               <dd>Not yet. The contract address on this page reads &quot;SOON&quot; until it launches.</dd>
               <dt>What happens to loot I&apos;m holding when I get busted?</dt>
